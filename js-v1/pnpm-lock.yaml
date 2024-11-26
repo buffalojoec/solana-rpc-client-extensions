@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@solana/web3.js':
-        specifier: ^1.95.3
-        version: 1.95.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+        specifier: github:solana-labs/solana-web3.js#11-18-feat_agave_v2_rpc_replace_getstakeactivation_with_rpc-client-extension
+        version: https://codeload.github.com/solana-labs/solana-web3.js/tar.gz/a6ad79abf187f7f936c317b072d361ebb9f04a25(bufferutil@4.0.8)(utf-8-validate@5.0.10)
     devDependencies:
       '@ava/typescript':
         specifier: ^4.1.0
@@ -53,6 +53,9 @@ importers:
         version: 5.5.4
 
 packages:
+
+  '@anza-xyz/solana-rpc-get-stake-activation@1.0.1':
+    resolution: {integrity: sha512-g5JiDnk6pb/8kzMiPJti2aM2DZFO6SjYaDpuOUgvPUcTWPR8oKiHvFOfG6Ixbu74g0nqAJP0IrxKUS5UI8q4OQ==}
 
   '@ava/typescript@4.1.0':
     resolution: {integrity: sha512-1iWZQ/nr9iflhLK9VN8H+1oDZqe93qxNnyYUz+jTzkYPAHc5fdZXBrqmNIgIfFhWYXK5OaQ5YtC7OmLeTNhVEg==}
@@ -393,6 +396,10 @@ packages:
 
   '@solana/web3.js@1.95.3':
     resolution: {integrity: sha512-O6rPUN0w2fkNqx/Z3QJMB9L225Ex10PRDH8bTaIUPZXMPV0QP8ZpPvjQnXK+upUczlRgzHzd6SjKIha1p+I6og==}
+
+  '@solana/web3.js@https://codeload.github.com/solana-labs/solana-web3.js/tar.gz/a6ad79abf187f7f936c317b072d361ebb9f04a25':
+    resolution: {tarball: https://codeload.github.com/solana-labs/solana-web3.js/tar.gz/a6ad79abf187f7f936c317b072d361ebb9f04a25}
+    version: 1.0.0-maintenance
 
   '@swc/helpers@0.5.12':
     resolution: {integrity: sha512-KMZNXiGibsW9kvZAO1Pam2JPTDBm+KSHMMHWdsyI/1DbIZjT2A6Gy3hblVXUMEDvUAKq+e0vL0X0o54owWji7g==}
@@ -1942,6 +1949,14 @@ packages:
 
 snapshots:
 
+  '@anza-xyz/solana-rpc-get-stake-activation@1.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@solana/web3.js': 1.95.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - utf-8-validate
+
   '@ava/typescript@4.1.0':
     dependencies:
       escape-string-regexp: 5.0.0
@@ -2193,6 +2208,29 @@ snapshots:
 
   '@solana/web3.js@1.95.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
     dependencies:
+      '@babel/runtime': 7.25.4
+      '@noble/curves': 1.5.0
+      '@noble/hashes': 1.4.0
+      '@solana/buffer-layout': 4.0.1
+      agentkeepalive: 4.5.0
+      bigint-buffer: 1.1.5
+      bn.js: 5.2.1
+      borsh: 0.7.0
+      bs58: 4.0.1
+      buffer: 6.0.3
+      fast-stable-stringify: 1.0.0
+      jayson: 4.1.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
+      node-fetch: 2.7.0
+      rpc-websockets: 9.0.2
+      superstruct: 2.0.2
+    transitivePeerDependencies:
+      - bufferutil
+      - encoding
+      - utf-8-validate
+
+  '@solana/web3.js@https://codeload.github.com/solana-labs/solana-web3.js/tar.gz/a6ad79abf187f7f936c317b072d361ebb9f04a25(bufferutil@4.0.8)(utf-8-validate@5.0.10)':
+    dependencies:
+      '@anza-xyz/solana-rpc-get-stake-activation': 1.0.1(bufferutil@4.0.8)(utf-8-validate@5.0.10)
       '@babel/runtime': 7.25.4
       '@noble/curves': 1.5.0
       '@noble/hashes': 1.4.0

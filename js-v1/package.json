@@ -47,8 +47,8 @@
     "format:fix": "prettier --write src test",
     "prepublishOnly": "pnpm build"
   },
-  "dependencies": {
-    "@solana/web3.js": "^1.95.3"
+  "peerDependencies": {
+    "@solana/web3.js": "github:solana-labs/solana-web3.js#11-18-feat_agave_v2_rpc_replace_getstakeactivation_with_rpc-client-extension"
   },
   "devDependencies": {
     "@ava/typescript": "^4.1.0",
